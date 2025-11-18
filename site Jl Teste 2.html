@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultoria Agro Premium</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        body {
+            background: #faf7f2;
+            color: #3b3b3b;
+        }
+
+        /* MENU */
+        nav {
+            width: 100%;
+            background: rgba(50, 40, 25, 0.9);
+            color: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(4px);
+        }
+
+        nav h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #f8f0e1;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffda9c;
+        }
+
+        /* HEADER */
+        header {
+            margin-top: 70px;
+            height: 85vh;
+            background-image: url('https://classic.exame.com/wp-content/uploads/2021/05/001.jpg?quality=70&strip=info&w=1024');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 40px;
+            position: relative;
+            color: white;
+        }
+
+        /* Overlay mais aconchegante */
+        header::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(1px);
+        }
+
+        header .content {
+            position: relative;
+            max-width: 700px;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #ffe9c6;
+        }
+
+        header p {
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            color: #fff7e7;
+        }
+
+        .btn-whatsapp {
+            background-color: #3fae55;
+            color: white;
+            padding: 16px 40px;
+            border-radius: 30px;
+            font-size: 1.3rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #2e8f44;
+            transform: scale(1.05);
+        }
+
+        /* SEÇÕES */
+        section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 70px 30px;
+        }
+
+        section h2 {
+            font-size: 2.6rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #4b3b26;
+        }
+
+        .sobre-texto {
+            text-align: center;
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: #5e4b33;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        /* SERVIÇOS */
+        .servicos {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 35px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: 0.3s;
+            border: 1px solid #f0e6d8;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+        }
+
+        .card img {
+            width: 80px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #4a3c28;
+            margin-bottom: 10px;
+        }
+
+        /* CONTATO */
+        .contato-box {
+            background: #fff5e6;
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .contato-box p {
+            font-size: 1.3rem;
+            color: #4a3b2a;
+            margin-bottom: 25px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #2a2216;
+            color: #f3e7d2;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <nav>
+        <h2>Agro Consultoria</h2>
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- HEADER -->
+    <header>
+        <div class="content">
+            <h1>Consultoria Agro para resultados reais</h1>
+            <p>Produtividade, sustentabilidade e gestão eficiente para quem vive do campo.</p>
+
+            <a class="btn-whatsapp" href="https://wa.me/5569992261771" target="_blank">
+                Agende sua consultoria agora!
+            </a>
+        </div>
+    </header>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <p class="sobre-texto">
+            Ajudamos produtores rurais e fazendas a alcançarem o máximo de desempenho com técnicas modernas, 
+            análise detalhada, manejo inteligente e estratégias personalizadas.
+            <br><br>
+            Atuamos com proximidade, clareza e compromisso — sempre respeitando a natureza e o valor de quem trabalha no campo.
+        </p>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos">
+        <h2>Nossos Serviços</h2>
+
+        <div class="servicos">
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png">
+                <h3>Consultoria Agronômica</h3>
+                <p>Análises, diagnósticos e estratégias completas para sua produção.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/990/990217.png">
+                <h3>Análise de Solo</h3>
+                <p>Interpretação detalhada para corrigir e otimizar o potencial produtivo.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png">
+                <h3>Agricultura de Precisão</h3>
+                <p>Mapeamento, tecnologia, drones e eficiência para sua lavoura.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3813/3813290.png">
+                <h3>Gestão e Estratégia Rural</h3>
+                <p>Planejamento, custos, tomada de decisão e aumento de lucratividade.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+
+        <div class="contato-box">
+            <p>Fale agora mesmo com um especialista e descubra como podemos transformar a sua produção.</p>
+
+            <a class="btn-whatsapp" href="https://wa.me/5569992261771" target="_blank">
+                Falar pelo WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2025 Agro Consultoria – Todos os direitos reservados.
+    </footer>
+
+</body>
+</html>
